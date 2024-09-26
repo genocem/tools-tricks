@@ -1,0 +1,7 @@
+virtualenv-clone myvirtualenv newenv
+
+activation can be autommatic by just opening a python file in the project or using the command
+
+source newenv/bin/activate
+
+use pip list to see available libraries

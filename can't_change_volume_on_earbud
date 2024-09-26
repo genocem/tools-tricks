@@ -1,0 +1,42 @@
+go to this file
+
+sudo gedit /usr/share/pulseaudio/alsa-mixer/paths/analog-output.conf.common
+
+
+before 
+[Element PCM]
+switch = mute
+volume = merge
+override-map.1 = all
+override-map.2 = all-left,all-right
+
+you should add :
+
+[Element Master]
+switch = mute
+volume = merge
+
+
+
+so it'll look like this:
+
+[Element Master]
+switch = mute
+volume = merge
+
+
+[Element PCM]
+switch = mute
+volume = merge
+override-map.1 = all
+override-map.2 = all-left,all-right
+
+
+
+
+this one idk why i added it but it's under the other 2 so maybe add it maybe not:
+
+[Element LFE]
+switch = mute
+volume = ignore
+

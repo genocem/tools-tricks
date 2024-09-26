@@ -1,0 +1,7 @@
+sudo apt install exfatprogs
+get name of volume:
+sudo fdisk -l
+
+use that name (in my case /dev/sda1)
+sudo exfatlabel /dev/sda1 flash128GB
+

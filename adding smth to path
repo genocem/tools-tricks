@@ -1,0 +1,12 @@
+this is for ubuntu 
+
+in home directory open file .profile or .bashrc (show hidden files if you're using the gui)
+
+in the end of the file add PATH="$PATH:insert the path you want to add here"
+
+save and logout to apply changes
+
+export PATH="$PATH:/home/ahmed/installations/JCD/java_card_devkit_tools-bin-v24/bin"
+export JC_HOME="/home/ahmed/installations/JCD/java_card_devkit_tools-bin-v24/"
+
+changes can be temporarily applied for a single terminal session by using source .profile (that is assuming you're in your home/yourName (~) directory

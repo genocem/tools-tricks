@@ -1,0 +1,9 @@
+list containers: docker ps -a
+stop container: docker stop <Container_ID>
+remove container(needs to be stopped): docker rm <Container_ID>
+forcefully remove a container: docker rm -f < Container_ID>
+remove an image: docker rmi -f <Image_name>
+add image: docker pull <name of image:<version(use latest for latest version)>>
+see images: docker images
+postgres: docker run -d --name postgresCont -p 5432:5432 -e POSTGRES_PASSWORD=pass123 postgres
+

@@ -1,0 +1,23 @@
+  sudo gedit /etc/systemd/system/chrome-shutdown.service
+ 
+----------------------------------------------------------------
+  
+[Unit]
+Description=Close Chrome before shutdown, reboot, or logout
+DefaultDependencies=no
+Before=shutdown.target reboot.target halt.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/pkill -15 -f chrome
+ExecStartPost=/bin/sleep 2
+
+[Install]
+WantedBy=reboot.target shutdown.target halt.target 
+  
+------------------------------------------------ 
+ 
+sudo systemctl enable chrome-shutdown.service
+sudo systemctl daemon-reload
+  
+  (i guess make it executable or not idk)

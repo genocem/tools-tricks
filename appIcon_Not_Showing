@@ -1,0 +1,21 @@
+for exec and icon just go to the installation directory of your app 
+make a .desktop file in cd /usr/share/applications with the name of your app or whatever
+then paste this config and change accordingly
+for apps installed from snap use cd /var/lib/snapd/desktop/applications
+
+command to make a user into sudoer   sudo gpasswd -a “username” sudo
+
+[Desktop Entry]
+Name=Mathlab
+Type=Application
+Exec=change
+Icon=change
+Terminal=false (some programs need this such as matlab)
+
+
+
+extra options
+[Desktop Entry]
+Comment=Mathlab useless
+Keywords=Mathlab;mathlab;m; helps in search maybe
+StartupNotify=true

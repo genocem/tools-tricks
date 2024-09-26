@@ -1,0 +1,28 @@
+to install yt-dlp you can either get it by pip install or get the .py file from the github repo
+then :
+	chmod 777 yt-dlp     
+	sudo cp yt-dlp /usr/local/bin/yt-dlp   
+
+
+options:
+	-o '<insert path/name here>' 				---- for custom name + path 
+	--embed-chapters              				---- to add chapters
+	--fragment-retries infinite --retries infinite		---- to have infinite retries ( recommended for unstable connections and school wifi)
+	--format "bv*[height=1080]+ba/b"			---- to download in a specific format 
+	--list-formats						---- to list all available formats of video and audio, their sizes and IDs 
+	-f 303+251						---- to choose specific formats ( you put the id for video+audio order doesn't matter
+
+selecting specific files will not add embedded chapters
+
+examples:
+	yt-dlp --fragment-retries infinite --retries infinite -f 303+251 -o '/home/ahmed/Downloads/howToEditaudio' https://www.youtube.com/watch?v=ej5PamFpw6M
+	yt-dlp --format "bv*[height=1080]+ba/b" --embed-chapters https://www.youtube.com/watch?v=fis26HvvDII&t=2651s
+
+
+
+
+if you downloaded audio and video seperately you can combine them using this command:
+	ffmpeg -i fileVideo -i fileAudio -c copy output.mp4
+
+
+for anything that isn't covered here visit https://ostechnix.com/yt-dlp-tutorial/

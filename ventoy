@@ -1,0 +1,5 @@
+when booting into ventoy just to check if it works there is not exit button so to exit:
+
+you can either force shut down the pc using the power button (and don't forget to make it not boot into usb first
+
+or you can browse a linux installation in boot folder and keep going into grub folder untill you find grub.efi and select it to open grub and choose your system

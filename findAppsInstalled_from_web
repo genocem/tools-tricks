@@ -1,0 +1,7 @@
+installed using apt :
+
+apt list --manual-installed | awk -F/ 'NR>1 {print $1}' > apt_packages.txt
+
+intalled using .deb file :
+
+apt list --installed | grep "local]"  ( would not work if app got updated using apt later)
