@@ -1,3 +1,5 @@
+needed this to change my usb's name
+
 sudo apt install exfatprogs
 get name of volume:
 sudo fdisk -l

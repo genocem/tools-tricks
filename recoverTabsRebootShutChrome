@@ -1,6 +1,9 @@
+  made this because i want to just shutdown my pc without closing chrome first (the restore tabs popup is driving me crazy)
+  
+  
   sudo gedit /etc/systemd/system/chrome-shutdown.service
  
-----------------------------------------------------------------
+---------------------------------------------------------------
   
 [Unit]
 Description=Close Chrome before shutdown, reboot, or logout
@@ -15,9 +18,8 @@ ExecStartPost=/bin/sleep 2
 [Install]
 WantedBy=reboot.target shutdown.target halt.target 
   
------------------------------------------------- 
+---------------------------------------------------------------
  
 sudo systemctl enable chrome-shutdown.service
 sudo systemctl daemon-reload
   
-  (i guess make it executable or not idk)

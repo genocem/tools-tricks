@@ -1,24 +1,31 @@
 Main tool is scrcpy to install search it then go to its github and follow how to install
-do not use the apt version cause it's old and doesn't have --otg 
+do not use the apt version cause it's old and doesn't have --otg which is our main focus
 
   tldr:
 	git clone https://github.com/Genymobile/scrcpy
  	cd scrcpy/
 	./install_release.sh
 
-scrcpy can be used to mirror phone screen if usb debugging is on
+scrcpy can be used to mirror phone screen if usb debugging is on and it can also be used to control the phone in case the touch screen doesn't work
 
-if not you can use scrcpy --otg 
-this will show available devices that can be controlled through usb where you can control them as if you're plugging actual keyboard+mouse
+to control the phone you simply plug it in (this might sound stupid but some cables are so bad that you need to plug them slowly for them to be able to send data)
 
-to use just get the serial of the device that you intend to control then type
+use this command: scrcpy --otg 
 
-sudo scrcpy --otg -s <serial here>
+this will search and connect to available devices that can be controlled through usb as if you're plugging in actual keyboard+mouse
 
-from there if the password is text based or a pin you can use keyboad (some phones need you to press enter after entering pin code)
+	if your phone doesn't connect immediately after entering the "scrcpy --otg" command and you get an output of serials, just copy the serial of your phone
 
-once you go in (i tested this in just one phone but) most of the time in samsung phones you will be immediately prompted if you want to share data with connected device (i forgot if you can just hit enter to accept or if you need to press tab first but if that works congrats you can get your data back) 
+	then enter this command:
+
+	sudo scrcpy --otg -s <serial here>
+
+then put your mouse inside the new little window that popped up 
+
+from there if the password is text based or a pin you can use keyboad (some phones need you to press enter after entering pin code) otherwise use mouse
+
+once you go in (i tested this in 2 samsung galaxy phones) you will be immediately prompted if you want to share data with connected device so press tab 2 times and hit enter and the device will begin sharing data with the computer
 
 you can navigate through most elements using tab 
 
-in samsung phones, bringing the top bar using the mouse makes makes the first option the settings app so you can immediately press enter 
+

@@ -1,3 +1,6 @@
 sudo apt-get update
 sudo apt-get upgrade
 sudo apt install gnome-shell-extension-manager
+
+when searching for something that uses a capital letter as the first letter just write that letter in capital
+i was confused not to find blur my shell on my roomate's pc but all i needed to do was just write blur as Blur
